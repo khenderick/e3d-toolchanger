@@ -1,4 +1,4 @@
-# Repo with various stuff related to my E3D Toolchanger
+# E3D Toolchanger
 
 This repo contains various folders with each parts of my E3D Toolchanger setup
 
