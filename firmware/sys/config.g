@@ -40,6 +40,7 @@ M203 X35000 Y35000 Z1200 C10000 E5000:5000  ; Set maximum speeds (mm/min)
 M201 X6000 Y6000 Z400 C500 E2500:2500       ; Set accelerations (mm/s^2)
 M906 X2000 Y2000 Z1330 C500 E1000:1000 I30  ; Set motor currents (mA) and motor idle factor in percent
 M84 S120                                    ; Set idle timeout
+M207 S0.8 F1800 Z0.4                        ; Retraction & zhop
 ; Absolute maxima: X-24:330 Y-45:200 (based on X0 Y0 in left-bottom corner of bed)
 
 ; Inputs
