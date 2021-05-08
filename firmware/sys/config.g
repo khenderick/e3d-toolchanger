@@ -1,3 +1,5 @@
+G4 S1  ; Wait for hardware
+
 ; General preferences
 M111 S0  ; Debugging off
 G21      ; Work in millimetres
