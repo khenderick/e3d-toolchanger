@@ -5,15 +5,15 @@ G90      ; Send absolute coordinates...
 M83      ; ...but relative extruder moves
 
 ; Network
-M550 P"Toolchanger"  ; Set name
-M551 P"toolchanger"  ; Set password
-M552 P0.0.0.0 S1     ; Enable network and acquire dynamic address via DHCP
-M586 P0 S1           ; Enable HTTP
-M586 P1 S0           ; Disable FTP
-M586 P2 S0           ; Disable Telnet
+M550 P"Toolchanger"    ; Set name
+M551 P"toolchanger"    ; Set password
+M552 P0.0.0.0 S1       ; Enable network and acquire dynamic address via DHCP
+M586 P0 S1             ; Enable HTTP
+M586 P1 S0             ; Disable FTP
+M586 P2 S0             ; Disable Telnet
 
 ; Motion type
-M669 K1  ; CoreXY mode	
+M669 K1  ; CoreXY mode
 
 ; Drive direction
 M569 P0 S1        ; Drive 0 Z
@@ -61,7 +61,7 @@ M915 P1:2 S1 F0 H280 R0  ; X / Y Axes
 
 ; Heaters and temperature sensors
 ; Bed heater
-M308 S0 P"temp0" Y"thermistor" T100000 B4138 C0  ; Set thermistor 
+M308 S0 P"temp0" Y"thermistor" T100000 B4138 C0  ; Set thermistor
 M950 H0 C"out0" T0                               ; Bed heater
 M143 H0 S120                                     ; Set temperature limit for heater 0 to 120C
 M307 H0 A590.6 C474.5 D4.4                       ; Heater 0 tuning results
@@ -91,13 +91,13 @@ M106 P3 S255 H2 T50  ; Tool 1 hot end
 M106 P4 S0           ; Tool 1 PCF
 
 ; Tools
-M563 P0 S"T0" D0 H1 F2  ; Define tool 0
-G10 P0 X11.2 Y44.3 Z-7  ; Set offset
-G10 P0 R0 S0            ; Reset initial tool 0 active and standby temperatures to 0C
+M563 P0 S"T0" D0 H1 F2     ; Define tool 0
+G10 P0 X10.4 Y44.3 Z-7.36  ; Set offset
+G10 P0 R0 S0               ; Reset initial tool 0 active and standby temperatures to 0C
 
-M563 P1 S"T1" D1 H2 F4  ; Define tool 1
-G10 P1 X11.2 Y44.3 Z-7  ; Set offset
-G10 P1 R0 S0            ; Reset initial tool 1 active and standby temperatures to 0C
+M563 P1 S"T1" D1 H2 F4     ; Define tool 1
+G10 P1 X10.7 Y44.3 Z-7.29  ; Set offset
+G10 P1 R0 S0               ; Reset initial tool 1 active and standby temperatures to 0C
 
 M593 F50  ; cancel ringing at 50Hz (https://forum.e3d-online.com/threads/accelerometer-and-resonance-measurements-of-the-motion-system.3445/)
 M376 H15  ; bed compensation taper
